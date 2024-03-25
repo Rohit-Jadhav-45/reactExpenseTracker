@@ -1,0 +1,12 @@
+.main-container{
+    margin: 2%;
+}
+
+.date{
+    display: flex;
+    gap: 10px;
+}
+
+.expTitle{
+    margin: 0;
+}
