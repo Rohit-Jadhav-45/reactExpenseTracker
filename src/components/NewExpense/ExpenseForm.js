@@ -16,9 +16,7 @@ const ExpenseForm = (props)=>{
    
      props.onSaveData(Expense);
     //  console.log(Expense)
-
    
-    
 
     const titleChangeHandler = (event) =>{
         setEnteredTitle(event.target.value);
@@ -35,7 +33,6 @@ const ExpenseForm = (props)=>{
         console.log(Expense)
     }
 
-   
     return(
         <form onSubmit={formSubmitHandler}>
          <div className="new-Expense-controls-Form">
