@@ -2,7 +2,7 @@ import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import { useState } from "react";
 
-let dummy_Expense = [
+let dummy_expenses = [
   {
     id:'e1',
     title : 'petrol',
@@ -29,19 +29,21 @@ let dummy_Expense = [
   }
   ];
 
-function App() {
+const App = () =>{
 
- const [expenses, setExpense] = useState(dummy_Expense);
+  
+   const [expenses, setExpense] = useState(dummy_expenses)
 
-    const addExpenseHandlerNew = (receiverExp) =>{
-      let updatedExpense = [receiverExp, ...expenses];
-      //  setExpense(updatedExpense);
+    const addExpenseHandlerNew = (expense) =>{
+      const updated_Expense = [expense , ...expenses];
+      setExpense(updated_Expense)
+    console.log(expense)
  }
 
   return (
       <div className="main-container">
       <h2>Welcome !</h2>
-      <NewExpense onAddData={addExpenseHandlerNew}/>
+      <NewExpense  onAddExpense={addExpenseHandlerNew}/>
       <Expenses item={expenses}/>
     </div>
   );
