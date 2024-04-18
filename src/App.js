@@ -1,6 +1,7 @@
 import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import { useState } from "react";
+import Table from "./components/Table";
 
 let dummy_expenses = [
   {
@@ -37,7 +38,7 @@ const App = () =>{
     const addExpenseHandlerNew = (expense) =>{
       const updated_Expense = [expense , ...expenses];
       setExpense(updated_Expense)
-    console.log(expense)
+      console.log(expense)
  }
 
   return (
@@ -45,6 +46,7 @@ const App = () =>{
       <h2>Welcome !</h2>
       <NewExpense  onAddExpense={addExpenseHandlerNew}/>
       <Expenses item={expenses}/>
+      <Table/>
     </div>
   );
 }
